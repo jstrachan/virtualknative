@@ -1,0 +1,112 @@
+Step: build-step-credential-initializer-ct4ss:
+
+{"level":"warn","ts":1555010641.5545793,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555010641.5559387,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-*********-elasticawesome-master-d9jjd:
+
+{"level":"warn","ts":1555010644.4291317,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555010645.8898513,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/*********/elasticawesome\" @ \"v0.0.1\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-setup-**-git-credentials:
+
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: build-step-build-npm-install:
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.379s
+found 0 vulnerabilities
+
+Step: build-step-build-npm-test:
+
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+Step: build-step-build-container-build:
+
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0411 19:26:04.980393      12 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0411 19:26:04.986530      12 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/04/11 19:26:04 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+2019/04/11 19:26:06 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Executing 0 build triggers                   
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0002] Taking snapshot of full filesystem...        
+[36mINFO[0m[0002] ENV PORT 8080                                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] EXPOSE 8080                                  
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] WORKDIR /usr/src/app                         
+[36mINFO[0m[0002] cmd: workdir                                 
+[36mINFO[0m[0002] Changed working directory to /usr/src/app    
+[36mINFO[0m[0002] Creating directory /usr/src/app              
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] COPY . .                                     
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] CMD ["npm", "start"]                         
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+2019/04/11 19:26:07 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2019/04/11 19:26:07 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2019/04/11 19:26:07 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2019/04/11 19:26:07 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2019/04/11 19:26:07 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2019/04/11 19:26:10 pushed blob: sha256:9e6d0bddcfbcb6689d76aad4f95c81394ce43d8867e255f0ed190786739b6b52
+2019/04/11 19:26:10 pushed blob: sha256:759ff4ac00a21915dc6069f4df8cbd4d7496e68d320406c4c43ef5d4f3be28b1
+2019/04/11 19:26:11 pushed blob: sha256:ea82d72bddfce5d86c0d81f19389101d4cf1708423613c718a1da2fd7079e8a0
+2019/04/11 19:26:13 gcr.io/**-development/elasticawesome:0.0.1: digest: sha256:4e0fc78fbf779db62d6347771c66624791932463dfb18c0efcaa38af529789e5 size: 1404
+Step: build-step-build-post-build:
+
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+Step: build-step-promote-changelog:
+
+Converted /workspace/source/charts/elasticawesome to an unshallow repository
+Generating change log from git ref 3c6d8f95d4b7ab24c58eb3e6ed38048435bca594 => bde00bddf82cf9311317df6a83d7e949e464454c
+Failed to enrich commits with issues: User.jenkins.io "-0" is invalid: metadata.name: Invalid value: "-0": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')
+Failed to enrich commits with issues: User.jenkins.io "-0" is invalid: metadata.name: Invalid value: "-0": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')
+Finding issues in commit messages using git format
+No release found for *********/elasticawesome and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/*********/elasticawesome/releases/tag/v0.0.1
+generated: /workspace/source/charts/elasticawesome/templates/release.yaml
+Created Release elasticawesome-0-0-1 resource in namespace **
+Updating PipelineActivity *********-elasticawesome-master-1 with version 0.0.1
+Updated PipelineActivities *********-elasticawesome-master-1 with release notes URL: https://github.com/*********/elasticawesome/releases/tag/v0.0.1
+Step: build-step-promote-helm-release:
+
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: jenkins-x http://chartmuseum.jenkins-x.io
+Successfully added Helm repository jenkins-x.
+Adding missing Helm repo: releases http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository releases.
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file elasticawesome-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+Step: build-step-promote-**-promote:
+
+prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app elasticawesome version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/*********/environment-*********-t1-staging/pull/5
+
+Pull Request https://github.com/*********/environment-*********-t1-staging/pull/5 is merged at sha 99c757ab7b277232893dd27b51e4686e3f7736f9
+Pull Request merged but we are not waiting for the update pipeline to complete!
+Could not find the service URL in namespace **-staging for names elasticawesome, **-elasticawesome, **-staging-elasticawesome
+Step: build-step-source-mkdir-*********-elasticawesome-master-c7b4l:
+
+{"level":"warn","ts":1555010877.8476045,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1555010877.8850586,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /pvc/from-build-pack/workspace\""}
+Step: build-step-source-copy-*********-elasticawesome-master-gsqk4:
+
+{"level":"warn","ts":1555010878.9095807,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1555010878.9280992,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"cp -r /workspace/source/. /pvc/from-build-pack/workspace\""}
